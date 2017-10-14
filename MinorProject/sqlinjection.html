@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+    <link rel="stylesheet" href="https://file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+    <link href="css/AdminLTE.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page home-page">
+        <header class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <div class="navbar-header">
+                            <a href="./" class="navbar-brand">
+                                <div class="brand-text brand-big hidden-lg-down"><span>Minor </span><strong> Project</strong></div>
+                                <div class="brand-text brand-small"><strong>MP</strong></div>
+                            </a>
+                            <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <nav class="side-navbar">
+                <div class="sidebar-header d-flex align-items-center">
+                    <!--<div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
+                    <div class="title">
+                        <h1 class="h4">Ethical Hacking</h1>
+                        <p>Let's start</p>
+                    </div>
+                </div>
+                <span class="heading"> Basic Attacks</span>
+                <ul class="list-unstyled">
+                    <li> <a href="./"><i class="icon-home"></i>Home</a></li>
+                    <li class="active"> <a href="sqlinjection.html"> <i class="icon-interface-windows"></i>Sql Injection</a></li>
+                    <li> <a href="phising.html"> <i class="fa fa-bar-chart"></i>Phising Attack </a></li>
+                    <li> <a href="ddos.html"> <i class="icon-padnote"></i>DoS/DDoS Attack </a></li>
+                    <li> <a href="pentesting.html"> <i class="icon-padnote"></i>Penetration Testing </a></li>
+                    <li> <a href="xss.html"> <i class="icon-grid"></i>Cross Side Scripting (XSS) </a></li>
+                </ul><span class="heading">Extras</span>
+                <ul class="list-unstyled">
+                    <li> <a href="#"> <i class="icon-flask"></i>References</a></li>
+                    <li> <a href="#"> <i class="icon-screen"></i>Project Report</a></li>
+                </ul>
+            </nav>
+            <div class="content-inner">
+                <div class="container" style="margin-top:15px">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-widget" style="max-height:555px;overflow:auto;">
+                                <div class="box-header with-border">
+                                    <div class="user-block">
+                                        <span class="username"><a href="#">What is Sql Injection ?</a></span>
+                                    </div>
+                                </div>
+                                <div class="box-body" style="font-size:12px;text-align:justify;font-family:Verdana">
+                                    <p>
+                                        SQL injection, also known as SQLI, is a common attack vector that uses malicious SQL code for backend database manipulation to access information that was not intended to be displayed. This information may include any number of items, including sensitive company data, user lists or private customer details.
+                                    </p>
+                                    <p>
+                                        The impact SQL injection can have on a business is far reaching. A successful attack may result in the unauthorized viewing of user lists, the deletion of entire tables and, in certain cases, the attacker gaining administrative rights to a database, all of which are highly detrimental to a business.
+                                    </p>
+                                    <p>
+                                        When calculating the potential cost of a SQLI, it’s important to consider the loss of customer trust should personal information such as phone numbers, addresses and credit card details be stolen.
+                                        While this vector can be used to attack any SQL database, websites are the most frequent targets.
+                                        <br />
+                                        <center><a href="login.aspx" class="btn btn-primary"><b>Implementation</b> </a></center>
+                                        <span class="username" style="font-size:15px;font-weight:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-bottom:1px solid #e3e3e3;margin-bottom:10px"><a href="#">How it works</a></span>
+                                        <br />
+                                        In order to run malicious SQL queries against a database server, an attacker must first find an input within the web application that is included inside of an SQL query.
+                                        In order for an SQL Injection attack to take place, the vulnerable website needs to directly include user input within an SQL statement. An attacker can then insert a payload that will be included as part of the SQL query and run against the database server.
+                                    </p>
+                                    <p>
+                                        A simple example of an SQL Injection payload could be something as simple as setting the password field to password’ OR 1=1.
+                                        This would result in the following SQL query being run against the database server.
+                                    </p>
+                                    <p>
+                                        <b>SELECT id FROM users WHERE username=’username’ AND password=’password’ OR 1=1’</b>
+                                    </p>
+                                    <p>
+                                        Once the query executes, the result is returned to the application to be processed, resulting in an authentication bypass. In the event of authentication bypass being possible, the application will most likely log the attacker in with the first account from the query result — the first account in a database is usually of an administrative user.
+                                        An SQL Injection needs just two conditions to exist – a relational database that uses SQL, and a user controllable input which is directly used in an SQL query.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+
+
+</body>
+</html>
