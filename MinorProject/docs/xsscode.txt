@@ -1,138 +1,656 @@
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-1254" /> 
-<meta name="description" content="ANONYMOUS 341" />
-<meta name="keywords" content="ANONYMOUS 341" />
-<meta name="author" content="ANONYMOUS 341" />
-<meta name="copyright" content="ANONYMOUS 341" />
-<meta name="application-name" content="Deaface" />
-
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' 
-rel='stylesheet' type='text/css'>
-<title>Hacked by ANONYMOUS 341</title>
-<link rel="icon" 
-type="image/png" href="http://oi68.tinypic.com/2niryis.jpg" />
-<script>
-var snowmax=35
-var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
-var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
-var snowletter="*"
-var sinkspeed=0.6
-var snowmaxsize=22
-var snowminsize=8
-var snowingzone=3
-var snow=new Array()
-var marginbottom
-var marginright
-var timer
-var i_snow=0
-var x_mv=new Array();
-var crds=new Array();
-var lftrght=new Array();
-var browserinfos=navigator.userAgent 
-var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-var ns6=document.getElementById&&!document.all
-var opera=browserinfos.match(/Opera/)  
-var browserok=ie5||ns6||opera
-
-function randommaker(range) {        
-    rand=Math.floor(range*Math.random())
-    return rand
+HTML><HEAD><TITLE>HACKED BY  R00tC0d3r
+</TITLE>
+<link REL="SHORTCUT ICON"HREF="http://www.pokersemdeposito.com/images/belgium_flag.gif">
+</HEAD>
+<!---coded by point from R00tC0d3r-->
+<BODY>
+<embed src="http://www.youtube.com/v/MDIaCSTDJys&autoplay=1"
+type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed>  
+ <script="javascript/text">
+ 
+ 
+<center><img src="http://www.horrorstew.com/images/demon_e0.gif"alt=" R00tC0d3r"></center>
+ 
+ 
+<center><font color="Yellow"><b><big><big><big><blink>Hacked By<font color="#cdc9c9">  R00tC0d3r </font> - L33TCr3w
+</blink></big></big></big></b></font>
+ 
+<link REL="SHORTCUT ICON"HREF="http://www.pokersemdeposito.com/images/belgium_flag.gif">
+ 
+<h2 style="text-align: center; font-family: Arial;" align="center"><font size="4"><span style="color: rgb(255, 140, 0); font-weight:
+bold;"> <a>
+<br>
+PEDO-s
+<br /> -We are comming for you-<hr>
+ 
+</span>
+ 
+</font></h2></center></center>
+ 
+ 
+<script language="Javascript1.2">
+ 
+var mymessage = "Secure Your Site Please, R00tC0d3r > ALL";
+ 
+ 
+ 
+function rtclickcheck(keyp){
+ 
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+ 
+   alert(mymessage);
+ 
+    return false;
+ 
+  }
+ 
+ 
+ 
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+ 
+   alert(mymessage);
+ 
+    return false;
+ 
+  }
+ 
 }
-
-function initsnow() {
-    if (ie5 || opera) {
-        marginbottom = document.body.clientHeight
-        marginright = document.body.clientWidth
-    }
-    else if (ns6) {
-        marginbottom = window.innerHeight
-        marginright = window.innerWidth
-    }
-    var snowsizerange=snowmaxsize-snowminsize
-    for (i=0;i<=snowmax;i++) {
-        crds[i] = 0;                      
-        lftrght[i] = Math.random()*15;         
-        x_mv[i] = 0.03 + Math.random()/10;
-        snow[i]=document.getElementById("s"+i)
-        snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
-        snow[i].size=randommaker(snowsizerange)+snowminsize
-        snow[i].style.fontSize=snow[i].size
-        snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
-        snow[i].sink=sinkspeed*snow[i].size/5
-        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-        snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
-        snow[i].style.left=snow[i].posx
-        snow[i].style.top=snow[i].posy
-    }
-    movesnow()
-}
-
-function movesnow() {
-    for (i=0;i<=snowmax;i++) {
-        crds[i] += x_mv[i];
-        snow[i].posy+=snow[i].sink
-        snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
-        snow[i].style.top=snow[i].posy
-        
-        if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
-            if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-            if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-            if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-            if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-            snow[i].posy=0
-        }
-    }
-    var timer=setTimeout("movesnow()",50)
-}
-
-for (i=0;i<=snowmax;i++) {
-    document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
-}
-if (browserok) {
-    window.onload=initsnow
-}
+ 
+ 
+ 
+document.onmousedown = rtclickcheck
+ 
+//-->
+ 
 </script>
-<style type="text/css"> 
-   #greets { 
-   width: 820px;
-   border-style: outset;  } 
-   #footer {   font-size: 9pt;   opacity: .7;  } 
-   .glow {   text-shadow: 0 0 10px #F59700;   font-family: "Black Ops One";  }
-   .blueglow {   text-shadow: 0 0 10px #0F6FBD;   font-family: "Black Ops One"  }
-   .whiteglow {   text-shadow: 0 0 10px #FFFFFF;   font-family: "Black Ops One";  } </style>
-
-<body bgcolor="black">
-<table width=100% height=100%><td align=center>
-
-<h1 style='font: 40px tahoma;size:40px;color:orange;text-shadow: 0px 0px 50px;'>Hacked by ANONYMOUS 341</h1>
+ 
+ 
+ 
+<!--
+ 
+body {
+ 
+       background-color: #ffffff;
+ 
+}
+ 
+-->
+ 
+</style><style type="text/css">
+ 
+<!--
+ 
+body {
+ 
+       background-color: #000000;
+ 
+       background-image: url(http://bilderhoster.at/upload/uowct1282358157.gif);
+ 
+}
+ 
+.style3 {
+ 
+       color: #FF0000;
+ 
+       font-size: 12;
+ 
+       font-family: Georgia, "Times New Roman", Times, serif;
+ 
+}
+ 
+.style10 {
+ 
+       color: #999999;
+ 
+       font-size: 14px;
+ 
+}
+ 
+.style13 {color:#FFA500 ; font-size: 14px; }
+ 
+.style14 {color: #999999}
+ 
+.style16 {font-size: 14px}
+ 
+.style17 {color: #FFFFFF}
+ 
+-->
+ 
+ 
+ 
+</style></head><body background-color="#000000" onLoad="StartTexte()">
+ 
+<p style="text-align: center;" align="center">
+ 
+ 
+ 
+ 
+ 
+</p><div align="center">
+ 
+  <script language="Javascript">
+ 
+<!--
+ 
+ 
+ 
+var max=0;
+ 
+function textlist()
+ 
+{
+ 
+       max=textlist.arguments.length;
+ 
+       for (i=0; i<max; i++)
+ 
+               this[i]=textlist.arguments[i];
+ 
+}
+ 
+ 
+ 
+tl=new textlist
+ 
+(
+"Working on making this into something",
+" idk why though, prob just take it out lol ",
+"OH HAI",
+"Never run a un-security site",
+"Don't worry, be Happy! ;)",
+"I will come back for you!",
+"Mess with the best, fail like the rest",
+);
+ 
+ 
+ 
+var text_x=0; pos=0;
+ 
+var l=tl[0].length;
+ 
+ 
+ 
+function textticker()
+ 
+{
+ 
+       document.form1.textfeld.value=tl[text_x].substring(0,pos)+"_";
+ 
+ 
+ 
+       if(pos++==l)
+ 
+       {
+ 
+               pos=0;
+ 
+               setTimeout("textticker()",2000);
+ 
+               text_x++;
+ 
+               if(text_x==max)
+ 
+                       text_x=0;
+ 
+               l=tl[text_x].length;
+ 
+       } else
+ 
+               setTimeout("textticker()",50);
+ 
+}
+ 
+ 
+ 
+function StartTexte()
+ 
+{
+ 
+       textticker();
+ 
+}
+ 
+ 
+ 
+// -->
+ 
+</script>
+ 
+</div>
+ 
+<p style="text-align: center;" align="center">
+ 
+ 
+ 
+ 
+ 
+</p><form name="form1" style="text-align: center;">
+ 
+  <div align="center">
+ 
+ 
+ 
+ 
+ 
+  </div>
+ 
+ 
+ 
+</form>
+ 
 <div align="center">
-
- <iframe width="3" height="1" src="https://www.youtube.com/embed/sAQEvp_I_N4?rel=0&autoplay=1&loop=1&playlist=sAQEvp_I_N4" frameborder="0" allowfullscreen></iframe
-</b>
-<pre style='color:#56AD15;text-shadow:blue 0px 0px 10px'>
-    _    _   _  _  _   _   __  __  _  _   _ __    ___ _  _   _ 
-   / \  | \ | |/ _ \| \ | \ \ / /  \/  |/ _ \| | | / __|  |__ /| || | / |
-  / _ \ |  \| | | | |  \| |\ V /| |\/| | | | | | | \_ \    |_ \| || |_| |
- / _ \| |\  | |_| | |\  | | | | |  | | |_| | |_| |___) |  _) |__   _| |
-//   \\| \_|\__/|_| \| |_| |_|  |_|\__/ \___/|____/  |____/   |_| |_|
-                                                                            
-</pre>
-<p align="center"><b>
-<font color="white" face="Times New Roman" size="6">
- <small style='font:20px tahoma;'>ANONYMOUS was here</small> </font>
-<strong ><font color="red" face="Times New Roman" size="4">
-<br>--> YOUR WEBSITE'S SECURITY IS THE WORST<-----</br>
-Message: YOUR WEBSITE WAS EASILY HACKED.</br> GET LOST WITH YOUR WORST SECURITY.</br>
-
-</font> <br></font>
-
-
-<pre style="color:white;font:20px tahoma;">
-  New Security Comes with New vulnerability
-                            - ANONYMOUS 341
-</pre>
-</body>
-</html>?
+ 
+  <p></p>
+ 
+  <p> </p>
+ 
+  <p> </p>
+ 
+  <p>
+ 
+ 
+ 
+ 
+ 
+  <h1>
+ 
+ 
+ 
+    <script>
+ 
+farbbibliothek = new Array();
+ 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+ 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+ 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+ 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+ 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+ 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+ 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+ 
+farben = farbbibliothek[4];
+ 
+function farbschrift()
+ 
+{
+ 
+for(var i=0 ; i<Buchstabe.length; i++)
+ 
+{
+ 
+document.all["a"+i].style.color=farben[i];
+ 
+}
+ 
+farbverlauf();
+ 
+}
+ 
+function string2array(text)
+ 
+{
+ 
+Buchstabe = new Array();
+ 
+while(farben.length<text.length)
+ 
+{
+ 
+farben = farben.concat(farben);
+ 
+}
+ 
+k=0;
+ 
+while(k<=text.length)
+ 
+{
+ 
+Buchstabe[k] = text.charAt(k);
+ 
+k++;
+ 
+}
+ 
+}
+ 
+function divserzeugen()
+ 
+{
+ 
+for(var i=0 ; i<Buchstabe.length; i++)
+ 
+{
+ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+ 
+}
+ 
+farbschrift();
+ 
+}
+ 
+var a=1;
+ 
+function farbverlauf()
+ 
+{
+ 
+for(var i=0 ; i<farben.length; i++)
+ 
+{
+ 
+farben[i-1]=farben[i];
+ 
+}
+ 
+farben[farben.length-1]=farben[-1];
+ 
+ 
+ 
+setTimeout("farbschrift()",30);
+ 
+}
+ 
+/
+var farbsatz=1;
+ 
+function farbtauscher()
+ 
+{
+ 
+farben = farbbibliothek[farbsatz];
+ 
+while(farben.length<text.length)
+ 
+{
+ 
+farben = farben.concat(farben);
+ 
+}
+ 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+ 
+}
+ 
+setInterval("farbtauscher()",5000);
+ 
+text= "<| Site Hacked R00tC0d3r |>"; //h
+ 
+string2array(text);
+ 
+divserzeugen();
+ 
+//document.write(text);</script>
+ 
+  </h1> <br />
+ 
+  <center><p>
+  <img src="http://www.customfighters.com/forums/imagehosting/529749dddc6fed04f.gif"/>
+  </center></p>
+ 
+          <script type="text/javascript">
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+ 
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+ 
+    this.running = true;
+ 
+    return;
+ 
+  }
+ 
+  this.element = element;
+ 
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+ 
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+ 
+  this.origText = this.element.innerHTML;
+ 
+  this.unparsedOrigText = this.origText;
+ 
+  this.cursor = (cursor ? cursor : "");
+ 
+  this.currentText = "";
+ 
+  this.currentChar = 0;
+ 
+  this.element.typingText = this;
+ 
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+ 
+  TypingText.all.push(this);
+ 
+  this.running = false;
+ 
+  this.inTag = false;
+ 
+  this.tagBuffer = "";
+ 
+  this.inHTMLEntity = false;
+ 
+  this.HTMLEntityBuffer = "";
+ 
+}
+ 
+TypingText.all = new Array();
+ 
+TypingText.currentIndex = 0;
+ 
+TypingText.runAll = function() {
+ 
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+ 
+}
+ 
+TypingText.prototype.run = function() {
+ 
+ if(this.running) return;
+ 
+ if(typeof this.origText == "undefined") {
+ 
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ 
+   return;
+ 
+ }
+ 
+ if(this.currentText == "") this.element.innerHTML = "";
+ 
+ if(this.currentChar < this.origText.length) {
+ 
+   if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+ 
+     this.tagBuffer = "<";
+ 
+     this.inTag = true;
+ 
+     this.currentChar++;
+ 
+     this.run();
+ 
+     return;
+ 
+   } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+ 
+     this.tagBuffer += ">";
+ 
+      this.inTag = false;
+ 
+      this.currentText += this.tagBuffer;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.inTag) {
+ 
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+ 
+     this.HTMLEntityBuffer = "&";
+ 
+      this.inHTMLEntity = true;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+ 
+     this.HTMLEntityBuffer += ";";
+ 
+      this.inHTMLEntity = false;
+ 
+      this.currentText += this.HTMLEntityBuffer;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.inHTMLEntity) {
+ 
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else {
+ 
+      this.currentText += this.origText.charAt(this.currentChar);
+ 
+    }
+ 
+    this.element.innerHTML = this.currentText;
+ 
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+ 
+   this.currentChar++;
+ 
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ 
+ } else {
+ 
+       this.currentText = "";
+ 
+       this.currentChar = 0;
+ 
+       this.running = false;
+ 
+       this.finishedCallback();
+ 
+ }
+ 
+}
+ 
+</script>
+ 
+ 
+ 
+</div>
+ 
+<center>
+ 
+  <p align="center" class="style3" id="message">
+ 
+       <span class="style14">-------------MESSAGE_START------------</span> <br>
+         
+           <span class="style14">------------BEGIN-------------</span> <br>
+ 
+ 
+       <span class="style13" span color="Orange">We are anonymous. We are defenders of the internet. We are yet again on the heels of pedofiles around the world. </span>
+          <span class="style13" span color="Orange">There are many websites with children being exposed and it is not right morally, legally or in respect to human rights. </span>
+         <span class="style13" span color="Orange"> Pedofiles of the internet this is a warning to you. This is a warning to your supporters and anyone that takes part in your sick world. We will come for you. <span> <br>
+          <span class="style13" span color="Orange"> We will find you. We will shut down your websites and kick you out.  </span><br>
+          <span class="style13" span color="Orange">You are not welcome here and we have had enough of you.Leave our children alone and while you are at it leave the rest of the planet alone.
+This is not a threat, this is a promise. We will hunt you down and exterminate you like cockroaches..</span>
+          <span class="style13" span color="Orange"You are the lowest form of life on this planet and it is time for you to be extinguished.We are the ones that will do this task. We are Anonymous. We are the great Legion. Everyone, from all walks of life have joined in this fight.People in every country, in every race and every religion all have the same belief. The belief that our children deserve to be safe.</span> <br />
+ 
+                <br> <span class="style14" span color="Orange"> There are many of you that are concerned about the same issue. Now is your time to act. Get involved.We do not forgive we do not forget expect us we are legion, and we are coming for you pedophiles </span>
+          <br>
+                <span class="style14" >Divided we fall</span> <p>
+                <span class="style13">UNITED WE STAND</span> <br />
+ 
+          <span class="style14">OwNeD By=</span></span> <span class="style13">R00tC0d3r</span><span class="style11"> <br />
+ 
+            <p align="center" class="style3">
+ 
+ 
+ <p align="center" class="style3">
+ 
+ 
+ 
+ 
+      <script type="text/javascript">
+ 
+new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+ 
+ 
+ 
+//Type out examples:
+ 
+TypingText.runAll();
+ 
+ 
+ 
+    </script>
+ 
+    </span><br>
+ 
+    <br>          
+ 
+   <center><font color = "red" > Gretz to: Everyone at L33TCR3w, P3d0W4rr10R, N3m3s1s, CyB3rBr41n, Fr33d0M, Cr0n05, Fl3m15hAn0nS, and mor3.........
+   
+  <br />
+ 
+ </font>
+ 
+</center>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<br>
+ 
+<br>
+ 
+ <center>
+<font color = "green" font size"7" >
+  Design'd And Coded By R00tC0d3r
+</font>
+</center>
+ 
+ 
+ 
+<!-- Coded By R00tC0d3r -->
+ 
+</body></html>

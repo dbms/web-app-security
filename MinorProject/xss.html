@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>XSS</title>
+    <title>Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -19,7 +19,7 @@
 <body>
     <div class="page home-page">
         <header class="header">
-            <nav class="navbar">
+            <nav class="navbar" style="background:#1a2226">
                 <div class="container-fluid">
                     <div class="navbar-holder d-flex align-items-center justify-content-between">
                         <div class="navbar-header">
@@ -29,16 +29,16 @@
                             </a>
                             <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                         </div>
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"></ul>
                     </div>
                 </div>
             </nav>
         </header>
         <div class="page-content d-flex align-items-stretch">
-            <nav class="side-navbar">
+            <nav class="side-navbar fixed-left" style="background:#1a2226;color:#fff">
                 <div class="sidebar-header d-flex align-items-center">
-                    <!--<div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
                     <div class="title">
-                        <h1 class="h4">Ethical Hacking</h1>
+                        <h1 class="h5" style="color:#fff">Web Application Security</h1>
                         <p>Let's start</p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <li> <a href="#"> <i class="icon-screen"></i>Project Report</a></li>
                 </ul>
             </nav>
-            <div class="content-inner">
+            <div class="content-inner" style="background:#1a2226">
                 <div class="container" style="margin-top:15px">
                     <div class="row">
                         <div class="col-md-12">
@@ -78,7 +78,9 @@
                                     <p>Cross site scripting attacks can be broken down into two types: stored and reflected. Stored XSS, also known as persistent XSS, is the more damaging of the two. It occurs when a malicious script is injected directly into a vulnerable web application.</p>
                                     <p>
                                         Reflected XSS involves the reflecting of a malicious script off of a web application, onto a user's browser. The script is embedded into a link, and is only activated once that link is clicked on.
-                                        <br /><br />
+                                        <br />
+                                        <center><a href="xss.aspx" class="btn btn-success"><b style=" font-family: 'Work Sans', sans-serif;">Implementation</b> </a></center>
+                                        <br />
                                         <span class="username" style="font-size:15px;font-weight:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-bottom:1px solid #e3e3e3;margin-bottom:10px"><a href="#">WHAT IS STORED CROSS SITE SCRIPTING</a></span><br />
                                         To successfully execute a stored XSS attack, a perpetrator has to locate a vulnerability in a web application and then inject malicious script into its server (e.g., via a comment field).
                                         <br />
@@ -86,6 +88,7 @@
                                     <p>
                                         One of the most frequent targets are websites that allow users to share content, including blogs, social networks, video sharing platforms and message boards. Every time the infected page is viewed, the malicious script is transmitted to the victim's browser.
                                         <br /><br />
+
                                         <span class="username" style="font-size:15px;font-weight:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-bottom:1px solid #e3e3e3;margin-bottom:10px"><a href="#">STORED XSS ATTACK EXAMPLE</a></span><br />
 
                                         While browsing an e-commerce website, a perpetrator discovers a vulnerability that allows HTML tags to be embedded in the site's comments section. The embedded tags become a permanent feature of the page, causing the browser to parse them with the rest of the source code every time the page is opened.

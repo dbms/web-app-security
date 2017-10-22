@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="accounts.google.aspx" />
+    <Content Include="admin.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -87,24 +89,19 @@
     <Content Include="ddos.html" />
     <Content Include="docs\xsscode.txt" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="gmailpass.html" />
     <Content Include="icons-reference\fonts\dashboard.svg" />
     <Content Include="icons-reference\icons-reference.html" />
     <Content Include="icons-reference\styles.css" />
-    <Content Include="img\avatar-1.jpg" />
-    <Content Include="img\avatar-2.jpg" />
-    <Content Include="img\avatar-3.jpg" />
-    <Content Include="img\avatar-4.jpg" />
-    <Content Include="img\avatar-5.jpg" />
-    <Content Include="img\avatar-6.jpg" />
-    <Content Include="img\bg.jpg" />
-    <Content Include="img\favicon.ico" />
+    <Content Include="img\footer-logo.JPG" />
+    <Content Include="img\footer-logo.png" />
+    <Content Include="img\grid.PNG" />
+    <Content Include="img\gy.JPG" />
+    <Content Include="img\logo.JPG" />
+    <Content Include="img\logo.png" />
     <Content Include="img\pen-testing.jpg" />
-    <Content Include="img\phis.png" />
-    <Content Include="img\project-1.jpg" />
-    <Content Include="img\project-2.jpg" />
-    <Content Include="img\project-3.jpg" />
-    <Content Include="img\project-4.jpg" />
-    <Content Include="img\template-mac.png" />
+    <Content Include="img\phi.png" />
+    <Content Include="img\profile-img.png" />
     <Content Include="img\waf.png" />
     <Content Include="img\xss-img.png" />
     <Content Include="index.html" />
@@ -127,6 +124,7 @@
     <Content Include="icons-reference\fonts\dashboard.ttf" />
     <Content Include="icons-reference\fonts\dashboard.woff" />
     <Content Include="login.aspx" />
+    <Content Include="password.google.aspx" />
     <Content Include="pentesting.html" />
     <Content Include="phising.html" />
     <Content Include="signup.aspx" />
@@ -145,12 +143,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accounts.google.aspx.cs">
+      <DependentUpon>accounts.google.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts.google.aspx.designer.cs">
+      <DependentUpon>accounts.google.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="password.google.aspx.cs">
+      <DependentUpon>password.google.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="password.google.aspx.designer.cs">
+      <DependentUpon>password.google.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">
